@@ -14,10 +14,11 @@ class Student
     # retrieve all the rows from the "Students" database
     # remember each row should be a new instance of the Student class
     sql = <<-SQL
-    SELECT * 
+    SELECT *
     FROM students
     SQL
-    
+
+    self.new_from_db(row)
   end
 
   def self.find_by_name(name)
