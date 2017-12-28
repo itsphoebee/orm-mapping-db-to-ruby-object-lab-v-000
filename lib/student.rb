@@ -71,4 +71,5 @@ class Student
 
   def self.students_below_12th_grade
     sql = "SELECT * FROM students WHERE students.grade < 12 "
+  end
 end
