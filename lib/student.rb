@@ -70,17 +70,17 @@ class Student
   end
 
   def self.students_below_12th_grade
-    sql = "SELECT * FROM students WHERE students.grade < 12"
+    sql = "SELECT * FROM students WHERE grade < 12"
     DB[:conn].execute(sql)
   end
 
   def self.first_X_students_in_grade_10(n)
-    sql = "SELECT * FROM students WHERE students.grade = 10 LIMIT ?"
+    sql = "SELECT * FROM students WHERE grade = 10 LIMIT ?"
     DB[:conn].execute(sql,n)
   end
 
   def self.first_student_in_grade_10
-    sql = "SELECT * FROM students WHERE students.grade = 10 ORDER BY students.id ASC LIMIT 1"
+    sql = "SELECT * FROM students WHERE grade = 10 ORDER BY students.id ASC LIMIT 1"
     DB[:conn].execute(sql)
   end
 
